@@ -1,6 +1,6 @@
 # My Site
 
-Static site (plain HTML/CSS/JS, no dependencies) with a **Data** page organized into downloadable categories — inspired by the structure of [AureleToussaint/homepage](https://github.com/AureleToussaint/homepage), simplified (no R/RStudio needed).
+Static site (plain HTML/CSS/JS, no dependencies) with a **Data** page organized into downloadable categories.
 
 ## Structure
 
@@ -21,7 +21,7 @@ Each subfolder in `files/` contains an example file to replace with your real on
 
 ## Data page: password and upload form
 
-The `data.html` page follows the model of [Rcourse.html](https://aureletoussaint.github.io/homepage/Rcourse.html):
+The `data.html` page regroup all information:
 
 - **Password screen**: all content is hidden behind a password form (`script.js`, variable `CORRECT_PASSWORD`, default value `data2026`). ⚠️ **This is not real security**: the password is visible in the page's source code (anyone can use "View Page Source"). It's just a cosmetic filter / to avoid accidental indexing, not protection against a serious access attempt. Never use it for sensitive or confidential data.
   - To change the password: open `script.js`, find the line `var CORRECT_PASSWORD = "data2026";`, and replace the value.
@@ -59,12 +59,12 @@ The `data.html` page follows the model of [Rcourse.html](https://aureletoussaint
    git add .
    git commit -m "First deployment of the site"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
+   git remote add origin https://https://github.com/cjezequel/BiodiversityDataCourse.git
    git push -u origin main
    ```
 4. On GitHub: **Settings → Pages** → under "Build and deployment", choose the `main` branch (and the `/ (root)` or `/docs` folder depending on where you placed the files) → **Save**.
 5. After a minute or two, the site will be live at:
-   `https://<your-username>.github.io/<your-repo>/`
+   `https://cjezequel.github.io/BiodiversityDataCourse/`
 
 No build tool is needed (no R, no Node): these are static HTML/CSS/JS files, served as-is by GitHub Pages.
 
