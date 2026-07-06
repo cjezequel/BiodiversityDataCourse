@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data — My Site</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= PASSWORD GATE ================= -->
+<!-- Note: this is only a client-side filter (cosmetic / to avoid accidental
+     indexing), not real security. The password is visible in the page source.
+     Do not use it to protect sensitive data. -->
+<div id="password-gate" class="gate">
+  <form id="password-form" class="gate-box">
+    <div class="eyebrow">Protected access</div>
+    <h1>Data</h1>
+    <p>This page is restricted. Enter the password to access the files.</p>
+    <input type="password" id="password-input" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit">Enter</button>
+    <p id="gate-error" class="gate-error" hidden>Incorrect password, please try again.</p>
+  </form>
+</div>
+
+<div id="site-content" hidden>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="index.html">First Last <span>·</span></a>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <button type="button" aria-haspopup="true" aria-expanded="false">Data</button>
+        <div class="dropdown">
+          <a href="data.html#datasets">Datasets</a>
+          <a href="data.html#scripts">Scripts &amp; tools</a>
+          <a href="data.html#documents">Documents</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="eyebrow">Resources</div>
+    <h1>Data</h1>
+    <p>Files organized by category. Click a card to expand the file list, or send us your own files using the form at the bottom of the page.</p>
+  </div>
+
+  <!-- ================= CARD GRID ================= -->
+  <div class="card-grid">
+
+    <section class="data-card" id="datasets" style="--card-color:#2f5d50;">
+      <button class="card-head" type="button" aria-expanded="false">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+        </span>
+        <span class="card-title">
+          <h2>Datasets</h2>
+          <span class="card-count">1 file</span>
+        </span>
+        <span class="chevron">›</span>
+      </button>
+      <p class="card-desc">Raw and cleaned datasets used in the projects featured on this site.</p>
+      <ul class="file-list">
+        <li>
+          <span>
+            <span class="file-name">example-dataset.csv</span>
+            <span class="file-meta">CSV · short description of the content</span>
+          </span>
+          <a class="download-btn" href="files/datasets/example-dataset.csv" download>Download</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="data-card" id="scripts" style="--card-color:#9c6b3e;">
+      <button class="card-head" type="button" aria-expanded="false">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4 3 12l5 8"/><path d="M16 4l5 8-5 8"/></svg>
+        </span>
+        <span class="card-title">
+          <h2>Scripts &amp; tools</h2>
+          <span class="card-count">1 file</span>
+        </span>
+        <span class="chevron">›</span>
+      </button>
+      <p class="card-desc">Scripts (R, Python, etc.) and small reusable tools.</p>
+      <ul class="file-list">
+        <li>
+          <span>
+            <span class="file-name">example-script.R</span>
+            <span class="file-meta">R · short description of the content</span>
+          </span>
+          <a class="download-btn" href="files/scripts/example-script.R" download>Download</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="data-card" id="documents" style="--card-color:#6b5b95;">
+      <button class="card-head" type="button" aria-expanded="false">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg>
+        </span>
+        <span class="card-title">
+          <h2>Documents</h2>
+          <span class="card-count">1 file</span>
+        </span>
+        <span class="chevron">›</span>
+      </button>
+      <p class="card-desc">Reports, methodological guides, and other PDF documents.</p>
+      <ul class="file-list">
+        <li>
+          <span>
+            <span class="file-name">0_Introduction.pdf</span>
+            <span class="file-meta">TXT · introduction</span>
+          </span>
+          <a class="download-btn" href="files/documents/0_Introduction.pdf" download>Download</a>
+        </li>
+        <li>
+          <span>
+            <span class="file-name">example-dataset.csv</span>
+            <span class="file-meta">TXT · dataset </span>
+          </span>
+          <a class="download-btn" href="files/datasets/example-dataset.csv" download>Download</a>
+        </li>
+        <li>
+          <span>
+            <span class="file-name">example-script.R</span>
+            <span class="file-meta">TXT · script </span>
+          </span>
+          <a class="download-btn" href="files/scripts/example-script.R" download>Download</a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- ================= UPLOAD FORM ================= -->
+  <section class="upload-section">
+    <div class="eyebrow">Contribute</div>
+    <h2>Send a file</h2>
+    <p>Want to share a dataset, a script, or a document? Use this form (powered by <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> — see the README for setup instructions).</p>
+    <form class="upload-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
+      <div class="form-row">
+        <label for="up-name">Name</label>
+        <input type="text" id="up-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="up-email">Email</label>
+        <input type="email" id="up-email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="up-category">Category</label>
+        <select id="up-category" name="category">
+          <option value="datasets">Datasets</option>
+          <option value="scripts">Scripts &amp; tools</option>
+          <option value="documents">Documents</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="up-file">File</label>
+        <input type="file" id="up-file" name="file" required>
+      </div>
+      <div class="form-row">
+        <label for="up-message">Message (optional)</label>
+        <textarea id="up-message" name="message" rows="3"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  © 2026 First Last — site hosted with GitHub Pages
+</footer>
+
+</div><!-- /#site-content -->
+
+<script src="script.js"></script>
+</body>
+</html>
